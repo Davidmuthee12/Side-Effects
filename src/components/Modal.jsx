@@ -6,11 +6,11 @@ function Modal({ open, children }) {
 
   useEffect(() => {
     if (open) {
-      dialog.current.showdown();
+      dialog.current.showModal();
     } else {
       dialog.current.close();
     }
-  }, []);
+  }, [open]);
 
   return createPortal(
     <dialog className="modal" ref={dialog}>
